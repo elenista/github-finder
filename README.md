@@ -1,4 +1,4 @@
-[:link: Live Demo](https://github-finder-2bxb-eight.vercel.app/)
+<a href="https://github-finder-2bxb-eight.vercel.app/" target="_blank">:link: Live Demo</a>
 
 # React + TypeScript + Vite
 
