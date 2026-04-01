@@ -6,7 +6,7 @@ type RecentSearchesProps = {
     onSelect: (username: string) => void
 }
 
-const RecentSearches = ({users, onSelect}): RecentSearchesProps => {
+const RecentSearches = ({users, onSelect}: RecentSearchesProps) => {
     const queryClient = useQueryClient();
     return ( <div className="recent-searches">
                 <div className="recent-header">
