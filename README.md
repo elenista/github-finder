@@ -1,75 +1,34 @@
-<a href="https://github-finder-2bxb-eight.vercel.app/" target="_blank">:link: Live Demo</a>
+# 🔍 GitHub Finder
 
-# React + TypeScript + Vite
+A modern, high-performance GitHub user search application built as part of a professional web development workshop. This project demonstrates advanced **React** patterns, **TypeScript** integration, and efficient data fetching using **TanStack Query**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Key Features
 
-Currently, two official plugins are available:
+* **Real-time Search:** Instantly fetch and display GitHub user profiles using the official REST API.
+* **Search Suggestions:** Dynamic dropdown with suggestions as you type, optimized with **Debouncing** to reduce API overhead.
+* **Persistent Search History:** A "Recent Searches" list with local persistence (`LocalStorage`) to maintain history across sessions.
+* **Performance Optimization:** Implements **Prefetching** on hover to deliver near-instant results and a seamless user experience.
+* **Type Safety:** Developed with 100% **TypeScript**, ensuring robust code and structured data models.
+* **Modern UI:** A clean, responsive interface with real-time feedback for loading and error states.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack & Skills
 
-## React Compiler
+* **Framework:** React 18
+* **Language:** TypeScript
+* **State Management & Data Fetching:** [TanStack Query](https://tanstack.com/query/latest) (React Query)
+* **Optimization:** `use-debounce` for input handling
+* **Icons:** React Icons (Font Awesome)
+* **Styling:** CSS3 (Responsive Design)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 💡 Learning Outcomes
 
-## Expanding the ESLint configuration
+Through this project, I implemented several advanced frontend concepts:
+* **Custom Hook Integration:** Efficiently managing asynchronous states (loading, error, data).
+* **Advanced State Logic:** Creating a unique search history (no duplicates, auto-limiting to the last 5 entries).
+* **Caching Strategies:** Leveraging React Query for automatic caching and manual cache invalidation (`refetch`).
+* **Deployment & Build:** Resolving complex TypeScript compilation errors to ensure a clean production build.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🎓 Acknowledgments
+This project was developed as part of the **"Modern React from the Beginning"** course by **Brad Traversy** on **Udemy**.
