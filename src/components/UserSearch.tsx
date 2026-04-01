@@ -5,7 +5,6 @@ import UserCard from "./UserCard";
 import RecentSearches from "./RecentSearches";
 import SuggestionDropdown from "./SuggestionDropdown";
 import { useDebounce } from "use-debounce";
-import type { GitHubUser } from "../types";
 
 const UserSearch = () => {
     const [username, setUsername] = useState('');
@@ -19,7 +18,7 @@ const UserSearch = () => {
     const [showSuggestions, setShowSuggestions] = useState(false);
 
     // Query to fetch specific user
-    const { data, isLoading, isError, error, refetch } = useQuery({
+    const { data, isLoading, isError, refetch } = useQuery({
         queryKey: ['users', submittedUsername],
         queryFn: () => fetchGithubUser(submittedUsername),
         enabled: !!submittedUsername
